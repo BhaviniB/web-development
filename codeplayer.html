@@ -1,3 +1,5 @@
+
+
 <html>
 
     <head>
@@ -24,6 +26,10 @@
                 height: 30px;
                 
             }
+		      
+			
+		
+		
             
             #logo {
                 
@@ -57,41 +63,16 @@
                 border-bottom-left-radius: 4px;
                 
             }
-            
-            #output {
+			 #output {
                 
                 border-top-right-radius: 4px;
                 border-bottom-right-radius: 4px;
                 border-right: 1px solid grey;
                 
-            }
-            
-            .active {
-                
-                background-color: #E8F2FF;
-                
-            }
-            
-            .highlightedButton {
-                
-                background-color: grey;
-                
-            }
+            }  
 			
-			textarea
-			{
-			width:50%;
-			resize:none;
-			
-			}
-			.panel
-			{
-			float:left;
-			width:50%;
-			
-			
-			}
-			  </style>
+			     
+        </style>
         
     </head>
 
@@ -116,30 +97,9 @@
                 <div class="toggleButton active" id="output">Output</div>
             
             </div>
+			</div>
+			
+			</body>
+			</html>
         
-        </div>
-		<div id="bodyContainer">
-		
-		<textarea id="htmlPanel"></textarea>
-		
-		<iframe id="outputPanel" class="panel"></iframe>
-		</div>
-		<script type="text/javascript">
-		    $(".toggleButton").hover(function() {
-                
-                $(this).addClass("highlightedButton");
-                
-            }, function() {
-                
-                $(this).removeClass("highlightedButton");
-                
-            });
-			$(".toggleButton").click(function(){
-			$(this).toggleClass("active");
-			$(this).removeClass("highlightedButton");
-			})
-			$("textarea").height( $(window).height()-$("#header").height()-15);
-		</script>
-        </body>
-		</html>
-		
+        

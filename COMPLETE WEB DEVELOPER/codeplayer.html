@@ -1,3 +1,5 @@
+
+
 <html>
 
     <head>
@@ -77,21 +79,35 @@
                 background-color: grey;
                 
             }
-			
-			textarea
-			{
-			width:50%;
-			resize:none;
-			
-			}
-			.panel
-			{
-			float:left;
-			width:50%;
-			
-			
-			}
-			  </style>
+            
+            textarea {
+                
+                resize: none;
+                border-top: none;
+                border-color: grey;
+                
+            }
+            
+            .panel {
+                
+                float:left;
+                width: 50%;
+                border-left: none;
+            }
+            
+            iframe {
+                
+                border:none;
+                
+            }
+            
+            .hidden {
+                
+                display: none;
+                
+            }
+        
+        </style>
         
     </head>
 
@@ -118,14 +134,33 @@
             </div>
         
         </div>
-		<div id="bodyContainer">
-		
-		<textarea id="htmlPanel"></textarea>
-		
-		<iframe id="outputPanel" class="panel"></iframe>
-		</div>
-		<script type="text/javascript">
-		    $(".toggleButton").hover(function() {
+        
+        <div id="bodyContainer">
+        
+            <textarea id="htmlPanel" class="panel"><p id="paragraph">Hello World!</p></textarea>
+            
+            <textarea id="cssPanel" class="panel hidden">p { color: green; }</textarea>
+            
+            <textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph").innerHTML = "Hello Rob!";</textarea>
+            
+            <iframe id="outputPanel" class="panel"></iframe>
+        
+        
+        </div>
+        
+        <script type="text/javascript">
+            
+            function updateOutput() {
+                
+                $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+                
+                document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+                
+                
+                
+            }
+            
+            $(".toggleButton").hover(function() {
                 
                 $(this).addClass("highlightedButton");
                 
@@ -134,12 +169,40 @@
                 $(this).removeClass("highlightedButton");
                 
             });
-			$(".toggleButton").click(function(){
-			$(this).toggleClass("active");
-			$(this).removeClass("highlightedButton");
-			})
-			$("textarea").height( $(window).height()-$("#header").height()-15);
-		</script>
-        </body>
-		</html>
-		
+            
+            $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+            })
+            
+            $(".panel").height($(window).height() - $("#header").height() - 15);
+            
+            $(".panel").width(($(window).width() / 2) - 10);
+            
+            updateOutput();
+            
+            $("textarea").on('change keyup paste', function() {
+    
+                updateOutput();
+                
+                
+            });
+            
+    
+
+        </script>
+        
+    </body>
+
+</html>

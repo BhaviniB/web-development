@@ -11,12 +11,13 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	  
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <style>
 	  
 	  .jumbotron{
 	  background-image:url(APP.png);
 	  text-align:center;
+	  margin-top:50px;
 	  }
 	  #email
 	  {
@@ -25,34 +26,60 @@
 	  }
 	  #appSummary
 	  {
+	  padding-top:100px;
+	  padding-bottom:100px;
+	  padding-bottom:100px;
 	  text-align:center;
 	  }
 	  .card-img-top
 	  {
 	  
 	  width:100%;
-	  }
+	  }  
+          #appStoreIcon {
+              
+              width: 200px;
+              
+          }
+          
+          #footer {
+              
+              background-color: aqua;
+              padding-top: 150px;
+              margin-top: 50px;
+              text-align: center;
+              padding-bottom: 150px;
+          }
+          
+          body {
+              
+              position: relative;
+              
+          }
 	  </style>
 	  
 	  
 	  
 	  
   </head>
-			  <body>
+			  <body data-offset="150" data-spy="scroll" data-target="#navbar">>
 
-			  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+			  <nav id="navbar" class="navbar-fixed-top navbar navbar-toggleable-md navbar-light bg-faded">
 		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
-		  <a class="navbar-brand" href="#">MyApp</a>
+		  <a class="navbar-brand"  href="#">MyApp</a>
 
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-			  <li class="nav-item active">
-				<a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+			   <li class="nav-item ">
+				<a class="nav-link" href="#jumbotron">Home <span class="sr-only">(current)</span></a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="#">Download The App</a>
+				<a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#footer">Download The App</a>
 			  </li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
@@ -64,7 +91,7 @@
 			</form>
 		  </div>
 		</nav>
-		<div class="jumbotron">
+		<div class="jumbotron" id="jumbotron">
 		  <h1 class="display-3">My Awesome App</h1>
 		    <p class="lead">This is why YOU should download this app.</p>
 				<hr class="my-4">
@@ -91,12 +118,13 @@
  </div>
  </div>  
 	  
-	  <div class="container">
+	  <div class="container" id="about">
+	  <div class="card-deck-wrapper">
 	  <div class="card-deck">
   <div class="card">
     <img class="card-img-top" src="app1.png" alt="Card image cap">
     <div class="card-block">
-      <h4 class="card-title">Card title</h4>
+      <h4 class="card-title"><i class="fas fa-anchor"></i>Card title</h4>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -104,7 +132,7 @@
   <div class="card">
     <img class="card-img-top" src="app1.png" alt="Card image cap">
     <div class="card-block">
-      <h4 class="card-title">Card title</h4>
+      <h4 class="card-title"><i class="fas fa-anchor"></i>Card title</h4>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -112,7 +140,7 @@
   <div class="card">
     <img class="card-img-top" src="app1.png" alt="Card image cap">
     <div class="card-block">
-      <h4 class="card-title">Card title</h4>
+      <h4 class="card-title"><i class="fas fa-anchor"></i>Card title</h4>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
@@ -121,7 +149,22 @@
 	 </div> 
 	  
 	  
-	  
+	   <div id="footer">
+      
+        <div class="row">
+          
+                <h2>Download the app!</h2>
+            
+            <p>Really, why should I download this app??
+			</p>
+            
+            <p><a href=""><img id="appStoreIcon" src="appstore111.png"></a></p>
+            
+            
+          
+          </div>
+      
+      </div>
 	  
 	  
 	  

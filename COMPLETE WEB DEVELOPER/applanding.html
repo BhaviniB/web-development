@@ -10,14 +10,27 @@
       
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-      
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	  
 	  <style>
 	  
 	  .jumbotron{
-	  background-image:url(applan.png);
+	  background-image:url(APP.png);
+	  text-align:center;
+	  }
+	  #email
+	  {
+	  width:300px;
 	  
+	  }
+	  #appSummary
+	  {
+	  text-align:center;
+	  }
+	  .card-img-top
+	  {
+	  
+	  width:100%;
 	  }
 	  </style>
 	  
@@ -25,47 +38,87 @@
 	  
 	  
   </head>
-      <body>
+			  <body>
 
-	  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">MyApp</a>
+			  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">MyApp</a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Download The App</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="email" placeholder="Email">
-      <input class="form-control mr-sm-2" type="password" placeholder="Password">
-     
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Download The App</a>
+			  </li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+			  <input class="form-control mr-sm-2" type="email" placeholder="Email">
+			  <input class="form-control mr-sm-2" type="password" placeholder="Password">
+			 
 
-	 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-    </form>
+			 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+			</form>
+		  </div>
+		</nav>
+		<div class="jumbotron">
+		  <h1 class="display-3">My Awesome App</h1>
+		    <p class="lead">This is why YOU should download this app.</p>
+				<hr class="my-4">
+		,		  <p>Want to know more? Join our mailing list.</p>
+				  <p class="lead">
+					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+				  </p>
+				  <form class="form-inline">
+				  <label class="sr-only" for="email">Email Address</label>
+	                <div class="input-group-addon">@</div>
+				  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" placeholder="Your email">
+		<button type="submit" class="btn btn-primary">Submit</button>
+		         </form>
+				</div>
+			 
+  
+  
+
+  
+	<div class="container>
+  <div class="row" id="appSummary">
+   <h1>Why this app  is awesome.</h1>
+ <p class="lead">Summary,again,about why this App is awesome.</p>
+ </div>
+ </div>  
+	  
+	  <div class="container">
+	  <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="app1.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
   </div>
-</nav>
-	  <div class="jumbotron">
-  <h1 class="display-3">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+  <div class="card">
+    <img class="card-img-top" src="app1.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="app1.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
 </div>
-	  
-	  
-	  
-	  
-	  
-	  
+	 </div> 
 	  
 	  
 	  

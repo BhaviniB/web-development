@@ -54,7 +54,9 @@
 </div>
 <button type="button" data-placement="bottom" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 
-    
+    <button id="mytooltip" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+  Tooltip on bottom
+</button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     '.
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
@@ -81,6 +83,17 @@
 	  $(function () {
   $('[data-toggle="popover"]').popover()
 })
+$('[data-toggle="tooltip"]).tooltip()
+
+$("#mytooltip").on(
+'shown.bs.tooltip'),function(event)
+
+{
+alert("tt displayed")
+
+
+}
+
 	  </script>
 </body>
 </html>

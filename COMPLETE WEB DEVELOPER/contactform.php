@@ -1,9 +1,51 @@
 <?php
+$error="";
+$successmessage="";
+if($_POST)
+{
+	if(!$_POST["email"])
+		$error=$error."email required.<br>";
+	
+ if(!$_POST["text"])
+		$error=$error."email required.<br>";
+	
+	if(!$_POST["subject"])
+		$error=$error."email required.<br>";
+	
+if($_POST['email'] && filter_var($_POST["email",
+FILTER_VALIDATE_EMAIL)===false)
+{
+	$error=$error."the email is invalid";
+}
+if($error!="")
+{
+	$erroe=<'div class="alert alert-danger" role="alert">
+  There were errors!'.error.
+'</div>'
+	
+}
 
- 
+else{
+	$emailTo="me@mydomain.com"
+$subject=$_POST['subject'];
+$content=$_POST['text'];
+$headers="From:".$_POST['email'];
+if (mail($emailTo,$subject,$content,$headers))
+{
+	
+	$successmessage='<div class="alert alert-success" role="alert">
+  your message was sent </div>'; 
+	
+}
 
+else
 
-
+{
+$error=<'div class="alert alert-danger" role="alert">
+  There were errors and your message could not be sent!'
+'</div>'	
+	
+}
 
 
 
@@ -44,7 +86,7 @@
     <label for="exampleFormControlTextarea1">Example textarea</label>
     <textarea name="text"class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <button name="submit" ssssssstype="submit" id="submit"  class="btn btn-primary">Submit</button>
+  <button name="submit" type="submit" id="submit"  class="btn btn-primary">Submit</button>
 </form>
 
     <!-- Optional JavaScript -->
@@ -57,7 +99,7 @@
   
   $("form).submit(function(e)
   {
-	  e.preventDefault();
+	 
 	  var error="";
 	  if($("#subject").val()=="")
 	  {
@@ -83,13 +125,14 @@
   $("#error").html(<'div class="alert alert-danger" role="alert">
   There were errors!'+error+
 '</div>');
+return false;
   
   
   
 	 } 
  else
  {
-	 $("form".unbind("submit").submit();
+	 return true;
 	 
 	 
 	 

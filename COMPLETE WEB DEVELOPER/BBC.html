@@ -1,358 +1,220 @@
-  <html>
-  <head>
-  <title>BBCUBE</title>
-  //styling using css
-  <style>
-  #top-bar{
-  width:1000px;
-  margin:0 auto;
-  height:40px;
-  }
-   body{
-   margin:0;
-   padding:0;
-   font-family:sans-serif;
-   }
-   #logo{
-   margin:8px;
-   width:100px;
-   float:left;
-   }
-  .top-bar-sections
-  {
-  float:left;
-  border-left:1px #CCCCCC solid;
-  height:100%;
-  margin:8px;
-  }
-  #image{
-  margin:5px 5px;
-  }
-  #sign-in-text
-  {
 
-  font-weight:bold;
-  font-size:90%;
-	position:relative;
-	bottom:11px;
-  }
+<html>
 
- 
-  .top-bar-menu
-  {
-  font-weight:bold;
-  font-size:90%;
-  padding:13px 15px 0px 15px;
-  height:27px;
-  }
-  #searchbox
-  {
-  border:none;
-  font-weight:bold;
-  padding-left:10px;
-  padding-right:0px; 
-   padding-bottom:10px;
-    padding-top:10px;
-	margin: 2px ;
-	color:black;
-	float:left;
-	width:60px;
-	padding-top:18px;
- }
-  #magg 
-  {
-  position:relative;
-  left:0px;
-  right:10px;
-  padding-top:16px;
-  
-  }
-  .clear
-  {
-  clear:both;
-  }
-  #menu-bar-container
-  {background-color:red;
-  width:100%;
-  height:70px;
-  }
-  #menubar{
-  color:white;}
-  h1{
-  padding:0;
-  margin:0;
-  color:white;
-  font-size:40px;
-  font-weight:normal;
-  padding-top:10px;
-  float:left;
-  }
-  #local-news{
-  border:1px white solid;
-  width:250px;
-  height:200px;
-  float:right;
-  color:white;
-  }
-  #local-news a{
-  position:relative;
-  top:20px;
-  right:15px;
-  left:15px;
-  color:white;
-  text-decoration:none;font-size:20px;
-  }
-  #local-news a:hover{
-  color:white;
-  text-decoration:underline;
-  font-size:20px;
-  
-  }
-  
-  #menu-bar-2-container
-  {
-  background-color:maroon;
-  width:100%;
-  height:40px;
-  }
-  #menu-bar-3-container
-  {
-  background-color:black;
-  width:100%;
-  
-  
-  }
-  #menu-bar-3
-  {
-  width:1000px;
-  height:40px;
-  margin:0 auto;
-  
-  }
-  #menu-bar-3 a{
-  text-decoration:none;
-  color:white;
-  font-size:18px;
-  padding:10px 10px;
-  border-right:1px white solid;
-  position:relative;
-  top:9px;
-  }
-  
-  a:hover
-  {
-  
- text-decoration:underline;
- }
-  .no-border
-  {
-  border:none !important;
-  }
- 
- #drop{
- position:relative;
- top:10px;
-  }
-  #page-container
-  {
-  margin:0 auto;
-  width:1000px;
-  }
-  #main-heading
-  {
-  color:red;
-  text-decoration:underline;
-  }
-  h3 a{
-  color:black;
-  font-weight:bold;
-  text-decoration:none;
-  font-size:20px;
- }
- h3 a:hover
- {
- color:blue;
- 
- }
- #article-summary{
- width:700px;
- color:#5a5a5a;
- float:left;
- }
- #clock
- {
- height:20px;
- width:20px;
- }
- #paraa
- {
- text-decoration:none;
- color:grey;
- font-size:20px;
- }
- 
- #article-summary a{
- text-decoration:none;
- color:grey;
- }
- #article-summary a{
- text-decoration:underline;
- color:grey;
- }
- #hannah{
- width:200px;
- height:200px;
- float:right;
- }
- #hr
- {
- width:670px;
- border-top:1px solid maroon;
- }
- #article-container{
- float:left;
- width:670px;
- border-right:1px solid #CCCCCC;
- padding-right:20px;
- }
- #watchlisten{
- margin-left:0px;
- width:320px;
- 
- }
- h3{
- 
- font-size:20px;
- }
- 
- .art{
- float:left;
- width:100px;
- height:100px;
- margin-right:10px;
- 
-} 
-.watch-listen-link{
-color:black;
-font-weight:bold;
-text-decoration:none;
-font-size:20px;
+    <head>
+        
+        <title>Technology - BBC News</title>
+    
+        <link rel="stylesheet" type="text/css" href="bbc.css">
+    
+    </head>
 
-}
-.watch-listen-link:hover
-{
-color:blue;
-text-decoration:underline;
-}
-.side-article{
-float:right;
-width:250px;
-position:relative;
-top:0px;
-bottom:500px;
-}
+    <body>
+        
+        <div id="topbar">
+        
+            <img id="logo" src="">
+            
+            <div id="signin-div" class="topbar-section">
+            
+                <img id="signin-image" src="">
+                
+                <span id="signin-text">Sign in</span>
+            
+            </div>
+            
+            <div id="bell-div">
+            
+                <img id="wigglyline" src="">
+                
+                <img id="bell" src="">
+            
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                News
+            
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                Sport
+            
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                Weather
+            
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                iPlayer
+            
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                TV
+            
+            </div>
+            
+            <div class="topbar-section topbar-menu">
+            
+                More
+                
+                <img id="more-arrow" src="images/more-arrow.png">
+            
+            </div>
+            
+            <div class="topbar-section">
+            
+                <input id="search-box" type="text" value="Search">
+                
+                <input type="image" id="magnifying-glass" src="">
+            
+            </div>
+        
+        </div>
+        
+        <div class="clear"></div>
+        
+        <div id="menu-bar-container">
+            
+            <div id="menu-bar">
+            
+                <h1>NEWS</h1>
+                
+                <div id="local-news">
+                
+                    <a href="">Find local news</a>
+                    
+                    <img src="images/pointer.png">
+                
+                </div>
+                
+            </div>
+            
+            <div class="clear"></div>
+            
+            <div id="menu-bar-2-container">
+            
+                <div id="menu-bar-2">
+                
+                    <a href="">Home</a>
+                    
+                    <a href="">UK</a>
+                    
+                    <a href="">World</a>
+                    
+                     <a href="">Business</a>
+                    
+                     <a href="">Politics</a>
+                    
+                     <a href="">Tech</a>
+                    
+                     <a href="">Science</a>
+                    
+                     <a href="">Health</a>
+                    
+                     <a href="">Education</a>
+                
+                     <a href="">Entertainment & Arts</a>
+                    
+                     <a href="">Video & Audio</a>
+                    
+                     <a href="" class="no-border">More</a>
+                    
+                    <img id="down-arrow" src="">
+                
+                </div>
+            
+            </div>
+        
+        </div>
+        
+        <div class="clear"></div>
+        
+        <div id="page-container">
+        
+            <div id="main-article">
+        
+                <h2>Technology</h2>
+                
+                <div id="article-container">
+        
+                    <h3><a href="">Asda bug exposed payment details</a></h3>
 
-  </style>
-  </head>
-  
-  <body>
-  <div id="top-bar">
-  <img id="logo" src="bbc-blocks-dark.png">
-  <div id="sign-in-div" class="top-bar-sections" >
-  <img src="Capture.png" id="image">
-  <span id="sign-in-text">Sign in</span>
-  </div>
-  <div class="top-bar-sections top-bar-menu" >News</div>
-  
-  <div class="top-bar-sections top-bar-menu" >Sport</div>
-  
-  <div class="top-bar-sections top-bar-menu" >Weather</div>
-  
-  <div class="top-bar-sections top-bar-menu" >Shop</div>
-  
-  <div class=" top-bar-menu top-bar-sections" >  More:    <select>
-  <option>Entertainment</option>
-  <option>Explainers</option>
-  <option>Have your say</option>
-  <option>Paradise Papers</option>
-  <option>Special Reps</option>
-  
-  </select>
-  </div>
-  <div class="top-bar-sections"></div>
-  <input id="searchbox" type="text" name="search" value="Search"
-  placeholder="Search">
-  <div>
-  <input type="image" src="mag.png" id="magg">
-  </div>
-  
-  
-  <div class="clear"> </div>
-  <div id="menu-bar-container">
-  <div id="menubar">
-  <h1>NEWS</h1>
-  <div id="local-news" >
-  <a href="">Find local news</a>
-</div>
-  </div>
-  
-  <div id="menu-bar-2-container">
-  
-  
-  </div>
-  <div class="clear"></div>
-  
-    <div id="menu-bar-3-container">
-     
-  <div id="menu-bar-3">
-  <a href="">Home</a>  
-  <a href="">Relationship</a>
-  <a href="">World</a>
-  <a href="">Asia</a>
-  <a href="">UK</a>
-  <a href="">Business</a>
-  <a href="">Science</a>
-  <a href="">Education</a>
-  <a href="">Arts</a>
-  <a href="">Video</a>
-  <a href="">Audio</a>
-  <a href="" class="no-border">More</a>
-  <img id="drop" src="Capture1.png">
-  </div>
-  </div>
-  <div class="clear"></div>
-  <div id="page-container"></div> 
-  <div id="main-article">
-  
-  <h2 id="main-heading">Relationship</h2>
-  <div id="article-container">
-  <h3><a href="">Hannah Baker dead.!</a> 
- <div id="article-summary"><p>Hannah Baker,22, killed bled 
- herself to death as the former was detected with major depression.
- </p>
- <p id="paraa"> <img id="clock" src="clock.png"> January 20,2018 <a href="">Know More..</a></p>
- </div>
- <img id="hannah" src="hannah.jpg">
- <hr id="hr" align="left">
- </div> 
- <div class="clear"></div>
- 
- 
- <div class="side-article">
-<div id="watchlisten"><h3>Watch and Listen</h3> 
- <img class="art" src="art1.png">
- <p><a  class="watch-listen-link" href="">Clay and Hannah</a></p>
- <p id="paraa"> <img id="clock" src="clock.png"> January 20,2018</p>
- <img class="art" src="art2.png">
- <p><a  class="watch-listen-link" href="">Caste</a></p>
- <p id="paraa"> <img id="clock" src="clock.png"> January 21,2018</p>
-<img class="art" src="art3.png"> 
- <p><a  class="watch-listen-link" href="">Voice</a></p>
- <p id="paraa"> <img id="clock" src="clock.png"> January 22,2018</p>
- 
- </div>
- </div>
- 
-  </body>
-  </html>
-  //practice
+                    <div id="article-summary">
+
+                        <p>Security vulnerabilities that put customers at risk have affected Asda's website for a couple of years, a security expert has revealed.</p>
+
+                        <p><img class="clock" src=""> <span class="date">19 January 2016</span><a class="topic-link" href="">Technology</a></p>
+                        
+                        <hr id="article-hr"  align="left">
+                        
+                        <p><a class="article-link" href="">Surveillance firm hit in hack attack</a></p>
+                        <p><a class="article-link" href="">eBay flaw has existed for months</a></p>
+
+                    </div>
+                    
+                    <img id="main-article-image" src="">
+                    
+                </div>
+                
+            </div>
+            
+            <div id="watch-listen">
+            
+                <h4>Watch/Listen</h4>
+                
+                <img class="article-side-image" src="">
+                
+                <div class="side-article">
+                
+                    <p><a class="watch-listen-link" href="">UK science chief backs blockchains</a></p>
+
+                    <p><img class="clock" src=""> <span class="date">19 January 2016</span></p>
+                    
+                </div>
+                
+                <div class="clear"></div>
+                
+                <img class="article-side-image" src="">
+                
+                <div class="side-article">
+                
+                    <p><a class="watch-listen-link" href="">
+Drone register gives 'accountability'</a></p>
+
+                    <p><img class="clock" src=""> <span class="date border-right">19 January 2016</span><br><a class="topic-link no-border" href="">Technology</a></p>
+                    
+                </div>
+                
+                <div class="clear"></div>
+                
+                <img class="article-side-image" src="">
+                
+                <div class="side-article">
+                
+                    <p><a class="watch-listen-link" href="">SpaceX rocket explodes during landing</a></p>
+
+                    <p><img class="clock" src=""> <span class="date border-right">19 January 2016</span><br><a class="topic-link no-border" href="">Science & Environment</a></p>
+                    
+                </div>
+                
+                
+            
+            </div>
+            
+            
+            
+            
+            
+        </div>
+    
+    </body>
+
+</html>

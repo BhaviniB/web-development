@@ -1,29 +1,44 @@
- <?php
+<?php
  
  
  if(array_key_exists('email',$_POST) OR array_key_exists('password',$_POST))
  {
+ 		$user='root';
+		$pass='';
+		$db='testdb';
+ 		$link = mysqli_connect("localhost", $user, $pass, $db);
 
+            if (mysqli_connect_error()) {
+        
+                die ("There was an error connecting to the database");
+        
+            } 
 
 if($_POST['email']=='')
 {
 	
-	echo "the email; address is required";
+	echo "<p>the email; address is required</p>";
 }
 else if($_POST['password']=='')
 {
 	
-	echo "the pass is required";
+	echo "<p>the pass is required</p>";
 }
 //checking if user exists
-$query="SELECT id from users WHERE email='".mysqli_real_escape_string($link,$_POST['email']."'";
-$result=mysqli_query($link,$query);
-if(mysqli_num_rows($result)>0)
-	echo "email address has been taken";
- }
+
  else{
+
+ 	$query="SELECT id from users WHERE email='".mysqli_real_escape_string($link,$_POST['email'])."'";
+	
+	$result=mysqli_query($link,$query);
+	
+	if(mysqli_num_rows($result)>0) {
+		echo "email address has been taken";
+	}
+
+	else {
 	 
-	 $query="INSERT INTO users (email,password ) VALUES ('".mysqli_real_escape_string($link,$_POST['email'])."'",'".mysqli_real_escape_string($link,$_POST['password'])."'")";
+	 $query = "INSERT INTO users (email, password) VALUES ('".mysqli_real_escape_string($link, $_POST['email'])."', '".mysqli_real_escape_string($link, $_POST['password'])."')";
 	 
 	 if(mysqli_query($link,$query))
 	 {
@@ -36,12 +51,9 @@ if(mysqli_num_rows($result)>0)
  
  }
 
- 
-$user='root';
-$pass='';
-$db='testdb';
-$link=new mysqli ('localhost',$user,$pass,$db)
- or die("Unable to connect");
+}
+}
+
 ?>
 <form method="post">
 <input name="email" type="text" >
@@ -49,9 +61,3 @@ $link=new mysqli ('localhost',$user,$pass,$db)
 <input type="submit" value="sign up">
 
 
-
-
-
-
-
-</form>

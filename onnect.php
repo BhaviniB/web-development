@@ -2,8 +2,13 @@
 $user='root';
 $pass='';
 $db='testdb';
-$db=new mysqli ('localhost',$user,$pass,$db)
+$link=new mysqli ('localhost',$user,$pass,$db)
  or die("Unable to connect");
 
-echo "created";
+$query="SELECT * FROM users"; 
+if(mysqli_query($link,$query))
+{
+	echo "query was successful";
+	
+}
 ?>

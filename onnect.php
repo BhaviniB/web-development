@@ -9,13 +9,22 @@ $link=new mysqli ('localhost',$user,$pass,$db)
  
  
  
- $query="UPDATE users SET email='lalala.com' WHERE id=1 LIMIT 1";
- mysqli_query($link,$query);
-/* $query="SELECT * FROM users"; 
+ //$query="UPDATE users SET email='lalala.com' WHERE id=1 LIMIT 1";
+ //mysqli_query($link,$query);
+
+ //$query1="UPDATE users SET password='lalala123' WHERE email='lalala.com' LIMIT 1";
+ 
+ //mysqli_query($link,$query1);
+ /* $query="SELECT * FROM users"; 
+*/
 if($result=mysqli_query($link,$query))
 {
-	$row=mysqli_fetch_array($result);
-	echo "your email is".$row['email']."
-	your password is".$row['password'];
-}*/
+	while($row=mysqli_fetch_array($result))
+	{
+	//echo "your email is".$row['email']."
+	//your password is".$row['password'];
+
+	print_r($row);
+	}
+	}
 ?>

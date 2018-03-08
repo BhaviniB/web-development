@@ -1,5 +1,6 @@
 <?php
- 
+ session_start();
+ echo $_SESSION['username'];
  
  if(array_key_exists('email',$_POST) OR array_key_exists('password',$_POST))
  {
@@ -42,7 +43,8 @@ else if($_POST['password']=='')
 	 
 	 if(mysqli_query($link,$query))
 	 {
-		 echo "you have been signed up";
+		  $_SESSION['email']=$_POST['email'];
+		  header("Location: session.php");
 		 
 	 }
 	 else{
